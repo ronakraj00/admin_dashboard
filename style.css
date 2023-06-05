@@ -1,0 +1,55 @@
+/* *{
+    border: 1px solid blue;
+} */
+
+@font-face {
+    font-family: roboto;
+    src: url(Roboto/Roboto-Black.ttf);
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: roboto;
+}
+.container{
+    display: grid;
+    grid-template-columns:1.2fr 4fr;
+}
+
+.left{
+    background-color:rgb(83, 181, 234);
+}
+#dashboard{
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 8fr;
+    align-items: center;
+    place-content: center;
+}
+
+#dashboard-icon{
+    width: 30px;
+}
+.nav a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    height: 30px;
+    text-align: left;
+    display: grid;
+    grid-template-columns: 1fr 8fr;
+    place-content: center;
+    align-items: center;
+}
+
+.nav a:nth-last-child(3){
+    margin-top: 50px;
+}
+
+svg{
+    width: 20px;
+    color: white;
+    margin-left: 8px;
+    margin-right: 8px;
+    fill: white;
+}
