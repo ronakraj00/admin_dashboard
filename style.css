@@ -10,11 +10,12 @@ body{
     margin: 0;
     padding: 0;
     font-family: roboto;
+    height: 100vh;
 }
 .container{
     display: grid;
     grid-template-columns:220px 4fr;
-    height: 100vh;
+    height: 100%;
 }
 
 
@@ -132,8 +133,8 @@ svg{
 
 
 .bell svg{
-    margin-right: 24px;
-    margin-bottom: 15px;
+    margin-right: 30px;
+    margin-bottom: 20px;
 }
 
 .profile h5{
@@ -196,4 +197,59 @@ svg{
 }
 .big-profile p span{
     font-weight: bold;
+}
+/* up */
+/* header css */
+/* header css */
+/* header css */
+
+
+/* content css */
+/* content css */
+/* content css */
+.content *{
+    border: 1px solid blue;
+}
+.content{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "projects announce"
+    "projects trending";
+}
+.projects{
+    grid-area: projects;
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows: 20px;
+    grid-auto-rows: 1fr;
+}
+.announce{
+    grid-area: announce;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20px;
+    grid-auto-rows: 1fr;
+}
+.trending{
+    grid-area: trending;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20px;
+    grid-auto-rows: 1fr;
+}
+
+.p-heading{
+    grid-area: 1/1/2/3;
+    
+}
+.p-heading,.t-heading,.a-heading{
+    font-weight: 600;
+}
+
+.projects>:not(:first-child){
+    padding: 10px;
 }
