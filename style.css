@@ -25,7 +25,7 @@ body{
 /* down */
 
 .left{
-    background-color:rgb(36, 160, 227);
+    background-color:rgb(36, 160, 227); 
 }
 
 #dashboard-logo{
@@ -81,7 +81,7 @@ svg{
 
 .right{
     display: grid;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: 150px 4fr;
 }
 
 .header{
@@ -208,32 +208,34 @@ svg{
 /* content css */
 /* content css */
 /* content css */
-.content *{
+/* .content *{
     border: 1px solid blue;
-}
+} */
 .content{
-    margin-bottom: 20px;
-    margin-top: 20px;
+    background-color: rgba(128, 128, 128, 0.096);
     display: grid;
     grid-template-columns: 2.5fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: max-content max-content;
     grid-template-areas:
     "projects announce"
     "projects trending";
+    gap: 20px;
 }
+
 .projects{
     grid-area: projects;
     display: grid;
     grid-template-columns:1fr 1fr;
     grid-template-rows: 20px;
     grid-auto-rows: 1fr;
+    row-gap: 10px;
 }
 .announce{
     grid-area: announce;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 20px;
-    grid-auto-rows: 1fr;
+    grid-auto-rows: max-content;
 }
 .trending{
     grid-area: trending;
@@ -241,6 +243,7 @@ svg{
     grid-template-columns: 1fr;
     grid-template-rows: 20px;
     grid-auto-rows: 1fr;
+    grid-auto-rows: max-content;
 }
 
 .p-heading{
@@ -249,8 +252,55 @@ svg{
 }
 .p-heading,.t-heading,.a-heading{
     font-weight: 600;
+    margin-left: 10px;
+    margin-top: 8px;
+}
+.a-heading{
+    margin-top: 20px;
 }
 
 .projects>:not(:first-child){
     padding: 10px;
+}
+
+.content img{
+    width: 80%;
+    border-radius:12px ;
+}
+
+.projects > :not(:first-child){
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: space-between;
+    background-color: white;
+    border-radius:6px;
+    border-left: 6px solid orange;
+    margin: 0px 10px;
+}
+
+.content a:first-child{
+    display: flex;
+    justify-content: center;
+}
+
+.content svg{
+    fill: black;
+    margin-top:10px ;
+}
+
+/* announce */
+.announce :not(:first-child),.trending :not(:first-child){
+    background-color:white;
+    padding: 8px;
+}
+.announce,.trending{
+    margin-right: 20px;
+}
+.announce1,.trending1{
+    margin-top: 30px;
+    border-radius: 6px 6px 0 0;
+}
+.announce3,.trending3{
+    border-radius:0 0 6px 6px;
 }
